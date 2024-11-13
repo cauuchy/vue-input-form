@@ -8,6 +8,7 @@
       ref="otpInputs"
       @input="moveToNextOtp(index)"
       :disabled="isDisabled"
+      @keypress="validateInput($event, index)"
     />
   </div>
 </template>
@@ -33,6 +34,13 @@ const moveToNextOtp = (index: number) => {
     isDisabled.value = true;
     console.log('OTP Complete:', otp.value.join(''));
     router.push("/welcome");
+  }
+};
+
+const validateInput = (event: KeyboardEvent, index: number) => {
+  // 数字以外の入力を無効にする
+  if (!/\d/.test(event.key)) {
+    event.preventDefault();
   }
 };
 </script>
