@@ -9,8 +9,10 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 
 const username = ref('');
+const router = useRouter();
 
 onMounted(() => {
   // セッションストレージからユーザーネームを取得
@@ -21,7 +23,7 @@ const logout = () => {
   // セッションストレージからユーザーネームを削除
   sessionStorage.removeItem('username');
   // 登録画面にリダイレクト
-  window.location.href = '/welcome';
+  router.push('/');
 };
 </script>
 
