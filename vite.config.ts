@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/github-pages-test/' : './',
   plugins: [
     vue(),
     vueDevTools(),
@@ -14,9 +15,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  },
-  base: './',
-  build: {
-    outDir: 'docs'
   }
 })
