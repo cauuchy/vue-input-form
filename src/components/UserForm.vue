@@ -152,6 +152,8 @@ const showTermsPopup = ref(false);
 const termsAccepted = ref(false);
 const termsScrolled = ref(false);
 
+console.log(termsScrolled);
+
 const registerUser = () => {
   sessionStorage.setItem('username', username.value);
   showOtpInput.value = true;
