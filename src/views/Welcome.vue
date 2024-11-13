@@ -21,7 +21,7 @@ const logout = () => {
   // セッションストレージからユーザーネームを削除
   sessionStorage.removeItem('username');
   // 登録画面にリダイレクト
-  window.location.href = `${import.meta.env.BASE_URL}welcome`;
+  window.location.href = `${import.meta.env.BASE_URL}`;
 };
 </script>
 

@@ -104,6 +104,9 @@
       <div class="d-grid">
         <button class="btn btn-primary" :disabled="!isFormValid || !termsAccepted" @click="registerUser">登録</button>
       </div>
+
+      <!-- 注釈 -->
+      <p class="text-muted text-center mt-2">デモサイトなので入力情報は保存しません</p>
     </div>
 
     <!-- OTPポップアップ -->
